@@ -1,6 +1,6 @@
 # Project Name
 
-**Authors**: Carlos A. Herrera, Alfred Orquiz
+**Authors**: Carlos A. Herrera, Alfredo Orquiz
 **Version**: 1.0.0
 
 ## Overview
