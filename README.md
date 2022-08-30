@@ -18,7 +18,8 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
-29-Aug-22 1443 - proof of life established for server
+29-AUG-22 1443 - proof of life established for server
+30-AUG-22 1400 - added book descriptions
 
 ## Estimates
 
@@ -28,9 +29,9 @@ Estimate of time needed to complete: 6 hours
 
 Start time: 1400
 
-Finish time:
+Finish time: 1600 the next day
 
-Actual time needed to complete:
+Actual time needed to complete: about 6 hours
 
 ## Credit and Collaborations
 
