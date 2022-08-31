@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const bookSchema = new Schema({
+  //TODO: add image
   title: { type: String, require: true },
   description: { type: String, require: true },
   status: { type: String, require: true }
