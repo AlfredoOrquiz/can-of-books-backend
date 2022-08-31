@@ -31,6 +31,7 @@ app.get('/test', (request, response) => {
 app.get('/books', getBooks);
 app.post('/books', postBooks);
 app.delete('/books/:id', deleteBooks);
+app.put('/books/:id', updateBooks);
 
 async function getBooks(req, res, next) {
   try {
@@ -42,7 +43,6 @@ async function getBooks(req, res, next) {
 };
 
 async function postBooks(req, res, next) {
-  console.log(req.params.id);
   try {
     let createdBooks = await Books.create(req.body)
     res.status(200).send('Book Created');
@@ -53,8 +53,19 @@ async function postBooks(req, res, next) {
 
 async function deleteBooks(req, res, next) {
   try {
-    await Books.findByIdAndDelete(req.params.id);
+    let id = (req.params.id);
+    await Books.findByIdAndDelete(id);
     res.status(200).send('Book Deleted');
+  } catch (err) {
+    next(err);
+  }
+};
+
+async function updateBooks(req, res, next) {
+  try {
+    let id = req.params.id;
+    await Books.findByIdAndUpdate(id, req.body, { new: true, overwrite: true });
+    res.status(200).send('Book Updated');
   } catch (err) {
     next(err);
   }
